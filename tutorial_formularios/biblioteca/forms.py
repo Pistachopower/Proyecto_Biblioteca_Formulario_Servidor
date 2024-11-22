@@ -5,6 +5,7 @@ from datetime import date
 import datetime
 from bootstrap_datepicker_plus.widgets import DatePickerInput
 
+#crea formulario forma generica 
 class LibroForm(forms.Form):
     #Definimos un campo de tipo Texto para el nombre
     nombre = forms.CharField(label="Nombre del Libro",
@@ -83,6 +84,7 @@ class LibroForm(forms.Form):
         #Siempre devolvemos el conjunto de datos.
         return self.cleaned_data
 
+#este es el que aparece
 class LibroModelForm(ModelForm):   
     class Meta:
         model = Libro
